@@ -26,8 +26,19 @@ body, p, h1, h2, h3, h4, button, div, footer, main {
     background: radial-gradient(circle at left, #48e, rgba(133, 179, 247, 0.867), rgb(56, 136, 255));
 }
 
+/* TITULO */
+
+.main__game-title-container {
+    display: flex;
+    justify-content: center;
+    max-width: 80vw;
+    width: 100%;
+    text-align: center;
+}
+
 h1 {
     color: var(--colorSecundario);
+    font-size: clamp(15px, 3vh, 50px);
 }
 
 .main__game-start-screen-button-start{
