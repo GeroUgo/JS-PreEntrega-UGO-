@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el numero entre 1 y 100</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="main">
+        <div class="main__game-start-screen-container">
+            <h1></h1>
+            <button class="main__game-start-screen-button-start">PLAY</button>
+        </div>
+        <div class="main__game-container">
+            <div class="main__game-instruccion">Escribe un número</div>
+            <div class="main__game-number-submit-container">
+                <input class="main__game-number" type="number">
+                <input class="main__game-submit" type="submit" name="" id="">
+            </div>
+            <div class="main__game-intentos-container">
+                Te quedan 10 intentos
+            </div>
+            <div class="main__game-error"></div>
+            <div class="main__game-error-mas-100"></div>
+        </div>
+        <div class="main__game-partida-ganada-container">
+            <div class="mensaje-perdiste">Ganaste!</div>
+            <div class="numero"></div>
+            <button class="boton-volver-jugar-ganada">Volver a jugar</button>
+        </div>
+        <div class="main__game-partida-perdida-container">
+            <div class="mensaje-perdiste">Perdiste</div>
+            <button class="boton-volver-jugar-perdida">Volver a jugar</button>
+        </div>
+    </main>
+    <script src="JAVASCRIPT/codigo.js"></script>
+    <script src="JAVASCRIPT/reiniciarJuego.js"></script>
+    <script src="JAVASCRIPT/tituloJuego.js"></script>
+</body>
+</html>
