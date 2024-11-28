@@ -1,0 +1,13 @@
+:root {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+body, div, h1, h2, h3, h4, footer, header, main, span, i {
+    padding: 0;
+    margin: 0;
+}
+
+.texto-no-se-encontro-producto {
+    margin-bottom: 20em;
+}
