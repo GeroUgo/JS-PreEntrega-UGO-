@@ -1,28 +1,28 @@
+"use strict";
 
-
-const abrirCarrito = document.querySelector(".carrito-icono");
+const abrirCarrito = document.querySelectorAll(".carrito-icono");
 const carrito = document.querySelector('.carrito-menu');
-const iconoCerrarCarrito = document.querySelector(".icon-close-cart")
+const iconoCerrarCarrito = document.querySelector(".icon-close-cart");
 
 let carritoEstado = false;
 
-abrirCarrito.addEventListener("click", ()=> {
-    if (carritoEstado === false) {
+const toggleCarrito = () => {
+    if (!carritoEstado) {
         carrito.classList.remove('w-0', 'opacity-0', 'hidden');
-        carrito.classList.add('w-[20vw]', 'opacity-100');
+        carrito.classList.add('lg:w-[25vw]', 'md:w-[100vw]', 'w-[100vw]', 'opacity-100'); // Responsivo
         carritoEstado = true;
-    }
-})
-
-iconoCerrarCarrito.addEventListener("click", ()=> {
-    if(carritoEstado) {
-        // Oculta el carrito
-        carrito.classList.remove('w-[20vw]', 'opacity-100');
+    } else {
+        carrito.classList.remove('lg:w-[25vw]', 'md:w-[100vw]', 'w-[100vw]', 'opacity-100');
         carrito.classList.add('w-0', 'opacity-0', 'hidden');
         carritoEstado = false;
     }
+};
+
+abrirCarrito.forEach (icon => {
+    icon.addEventListener("click", toggleCarrito);
 })
 
+iconoCerrarCarrito.addEventListener("click", toggleCarrito);
 
 
 

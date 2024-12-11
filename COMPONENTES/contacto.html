@@ -16,7 +16,7 @@
     <!-- LINK TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="overflow-x-hidden">
     <header class="sticky top-0 bg-gray-200 shadow-md w-full z-50">
         <!-- Navbar -->
         <nav class="flex justify-between bg-gray-800 text-white px-8 py-4 md:px-12 items-center">
@@ -61,18 +61,27 @@
                 </a>
             </div>
     
-            <!-- Mobile Menu -->
-            <button class="xl:hidden flex items-center" id="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+            <div class="md:flex space-x-6 md:hidden flex items-center">
+                <!-- Cart Icon -->
+                <div class="relative hover:text-gray-400 carrito-icono cursor-pointer" >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+  
+                <!-- Mobile Menu -->
+                <button class="md:hidden flex items-center" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+              </div>
         </nav>
 
               <!-- Menú móvil -->
       <div 
             id="mobile-menu" 
-            class="md:hidden flex flex-col justify-center items-center bg-gray-800 text-white p-12 transform transition-transform duration-300 ease-in-out origin-top "
+            class="md:hidden hidden flex flex-col justify-center items-center bg-gray-800 text-white p-12 transform transition-transform duration-300 ease-in-out origin-top "
         >
             <a class="hover:text-gray-400" href="../index.html">Inicio</a>
             <a class="hover:text-gray-400" href="tienda.html">Tienda</a>
@@ -87,13 +96,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                 </a>
-        
-                <!-- Cart Icon -->
-                <div class="relative hover:text-gray-400 carrito-icono cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                </div>
         
                 <!-- User Icon -->
                 <a class="hover:text-gray-400" href="../COMPONENTES/SECUNDARIAS/login.html">
@@ -122,7 +124,7 @@
             </div>
             <!-- TOTAL PRECIO -->
 
-            <div class="flex flex-col items-center border-t-2 border-t-black ">
+            <div class="flex flex-col items-center border-t-2 border-t-black boton-carrito-contenedor">
                 <p class="text-center pt-2 pb-2 precio-total-carrito"></p>
                 <a href="SECUNDARIAS/finalizarCompra.html" class="boton-ir-finalizar-compra" id="boton-redireccion-finalizar-compra">
                     <button class="bg-black text-white border border-black hover:bg-white hover:text-black hover:border-black px-4 py-2 rounded transition duration-[300ms] ease-in-out">Finalizar compra</button>

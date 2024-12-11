@@ -4,15 +4,11 @@
 const metodosPago = document.querySelectorAll('input[name="metodoPago"]');
 const camposTarjetaCredito = document.getElementById('campos-tarjeta-credito');
 
-metodosPago.forEach(metodo => {
-    metodo.addEventListener('change', function() {
-        if (this.value === 'tarjeta-credito') {
-            camposTarjetaCredito.style.display = 'block';
-        } else {
-            camposTarjetaCredito.style.display = 'none';
-        }
+    metodosPago.forEach(metodo => {
+        metodo.addEventListener('change', function() {
+            this.value === 'tarjeta-credito' ? camposTarjetaCredito.style.display = 'block' : camposTarjetaCredito.style.display = 'none';
+        });
     });
-});
 
     // Recuperar los datos de localStorage
     const productosEnCarrito = JSON.parse(localStorage.getItem('informacion'));
@@ -20,19 +16,22 @@ metodosPago.forEach(metodo => {
     const productosFinalesInformacion = document.querySelector(".productos-finales")
 
     let subtotal = 0;
-    productosEnCarrito.forEach(producto => {
-        subtotal += producto.precio * producto.cantidad;
+    // Agregue desestructuración aca
+    productosEnCarrito.forEach(({precio, cantidad}) => {
+        subtotal += precio * cantidad;
     });
 
     document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
     document.getElementById('total-precio-finalizar-compra').textContent = `$${(subtotal + 5).toFixed(2)}`;
 
     const productosCarrito = document.createElement('div');
-    productosEnCarrito.forEach(producto => {
+    // Agregue desestructuración acA
+    productosEnCarrito.forEach(({ titulo, cantidad, precio }) => {
         const productoDiv = document.createElement('div');
-        productoDiv.textContent = `${producto.titulo} x${producto.cantidad} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
+        productoDiv.textContent = `${titulo} x${cantidad} - $${(precio * cantidad).toFixed(2)}`;
         productosFinalesInformacion.appendChild(productoDiv);
     });
+    
 
 
 

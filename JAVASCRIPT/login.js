@@ -18,7 +18,6 @@ function showTab(tab) {
   }
 }
 
-// Form validation
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -33,7 +32,6 @@ document.querySelectorAll('form').forEach(form => {
           }
       }
 
-      // Aquí puedes agregar la lógica de envío del formulario
       console.log('Formulario enviado');
   });
 });

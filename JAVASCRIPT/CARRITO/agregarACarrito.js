@@ -4,30 +4,28 @@ const botonAgregarAlCarrito = document.querySelectorAll(".agregar-carrito-button
 const productosContainerCarrito = document.querySelector(".productos-container-carrito");
 const precioTotalCarrito = document.querySelector(".precio-total-carrito");
 
-// Cargar productos del carrito desde localStorage al iniciar
 let productosEnCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Función para actualizar el total del carrito
 function actualizarTotalCarrito() {
-    // Calcula el precio total
     const total = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
     precioTotalCarrito.innerHTML = `Total: $ ${total}`;
 }
 
 // Función para renderizar los productos en el carrito
 function renderizarCarrito() {
-    productosContainerCarrito.innerHTML = ''; // Limpia el carrito antes de volver a renderizar
-
-    productosEnCarrito.forEach((producto, index) => {
+    productosContainerCarrito.innerHTML = ''; // 
+    // desestructuración aca
+    productosEnCarrito.forEach(({ id, img, titulo, precio, cantidad }, index) => {
         const carritoHTML = `
-            <div class="flex justify-between items-center p-5 border m-3 productos" id="${producto.id}">
-                <img class="w-24" src="${producto.img}" alt="${producto.titulo}">
+            <div class="flex justify-between items-center p-5 border m-3 productos" id="${id}">
+                <img class="w-24" src="${img}" alt="${titulo}">
                 <div class="flex flex-col items-center gap-2 justify-center">
-                    <p class="text-center">${producto.titulo}</p>
-                    <p>$ ${producto.precio}</p>
+                    <p class="text-center">${titulo}</p>
+                    <p>$ ${precio}</p>
                     <div class="flex gap-6">
                         <button class="px-2 py-1 bg-gray-300 rounded boton-contador-carrito boton-menos" data-index="${index}">-</button>
-                        <span class="font-bold contador-carrito">${producto.cantidad}</span>
+                        <span class="font-bold contador-carrito">${cantidad}</span>
                         <button class="px-2 py-1 bg-gray-300 rounded boton-contador-carrito boton-mas" data-index="${index}">+</button>
                     </div>
                 </div>
@@ -98,7 +96,13 @@ botonAgregarAlCarrito.forEach((boton, index) => {
 
             carritoEstadoProductosMensaje();
         } else {
-            alert("Este producto ya está en el carrito.");
+            Toastify({
+
+                text: "El producto ya esta en el carrito",
+                
+                duration: 3000
+                
+                }).showToast();
         }
     });
 });
@@ -131,7 +135,6 @@ const borrarProductosCarrito = () => {
     });
 }
 
-// Inicializa el contador y el carrito
 renderizarCarrito();
 
 
@@ -146,5 +149,3 @@ botonAFinalizarCompra.addEventListener("click", () => {
     localStorage.setItem("total", total);
 
 });
-
-

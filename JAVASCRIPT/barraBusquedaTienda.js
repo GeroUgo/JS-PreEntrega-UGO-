@@ -18,10 +18,8 @@ const busquedaProductos = () => {
 
     // Lo convertimos en un array para usar el foreach
     Array.from(productosContainer.children).forEach(producto => {
-        // conseguimos el titulo
         const tituloProducto = producto.querySelector(".titulo-producto").textContent.trim();
 
-        // Si cumple con lo que le pase, entonces muestra el producto
         if (tituloProducto.toLowerCase().includes(barraBusquedaTienda.value.toLowerCase().trim())) {
             producto.style.display = 'block';
             hayResultados = true; 
@@ -31,9 +29,7 @@ const busquedaProductos = () => {
     });
 
     // Si no se encuentran productos muestra el mensaje de error
-    if (hayResultados) {
-        document.querySelector(".error-producto").style.display = "none";  // Oculta error
-    } else {
-        document.querySelector(".error-producto").style.display = "block"; // Muestra error
-    }
+    // Agregue operador ternario
+    const errorProducto = document.querySelector(".error-producto");
+    errorProducto.style.display = hayResultados ? "none" : "block";
 };
