@@ -1,0 +1,74 @@
+[
+    {
+        "imagen": "../IMAGENES/LandingPage.jpg",
+        "titulo": "Landing Page Profesional",
+        "precio": 1000,
+        "descripcion": "Diseño y desarrollo de una página de aterrizaje optimizada para conversiones, perfecta para campañas de marketing, generación de leads, o promociones.",
+        "slug": "landing-page",
+        "id": "landing-page"
+    },
+    {
+        "imagen": "../IMAGENES/TiendaOnlinePersonalizada.jpg",
+        "titulo": "Tienda Online Personalizada",
+        "precio": 2000,
+        "descripcion": "Desarrollo de una tienda en línea personalizada, con integración de pasarelas de pago, gestión de inventarios, y experiencia de usuario optimizada.",
+        "slug": "tienda-online",
+        "id": "tienda-online"
+    },
+    {
+        "imagen": "../IMAGENES/PaginaWebCorporativa.jpg",
+        "titulo": "Página Web Corporativa",
+        "precio": 5000,
+        "descripcion": "Creación de un sitio web profesional para empresas, con enfoque en la identidad de marca y una estructura sólida para mostrar productos y servicios.",
+        "slug": "web-corporativa",
+        "id": "web-corporativa"
+    },
+    {
+        "imagen": "../IMAGENES/BlogProfesional.jpg",
+        "titulo": "Blog Profesional",
+        "precio": 700,
+        "descripcion": "Diseño y desarrollo de blogs, con funcionalidades de fácil manejo, integración con redes sociales, y optimización para SEO.",
+        "slug": "blog-profesional",
+        "id": "blog-profesional"
+    },
+    {
+        "imagen": "../IMAGENES/PortafolioProfesional.jpg",
+        "titulo": "Portafolio Profesional",
+        "precio": 500,
+        "descripcion": "Sitio web para mostrar trabajos creativos o profesionales, ideal para artistas, diseñadores, fotógrafos y otros freelances.",
+        "slug": "portafolio-profesional",
+        "id": "portafolio-profesional"
+    },
+    {
+        "imagen": "../IMAGENES/DesarrolloAppWeb.jpg",
+        "titulo": "Desarrollo de Aplicación Web Personalizada",
+        "precio": 5000,
+        "descripcion": "Desarrollo de aplicaciones web personalizadas que se adapten a las necesidades específicas de cada cliente, como gestión interna, CRM, etc.",
+        "slug": "aplicacion-web",
+        "id": "aplicacion-web"
+    },
+    {
+        "imagen": "../IMAGENES/RediseñoWeb.webp",
+        "titulo": "Rediseño de Sitio Web",
+        "precio": 700,
+        "descripcion": "Rediseño completo de sitios web existentes para mejorar su funcionalidad, rendimiento, y estética visual, con optimización para móviles.",
+        "slug": "rediseño-web",
+        "id": "rediseño-web"
+    },
+    {
+        "imagen": "../IMAGENES/OptimizacionSEO.webp",
+        "titulo": "Optimización SEO",
+        "precio": 300,
+        "descripcion": "Servicio de optimización para motores de búsqueda para mejorar el posicionamiento de un sitio web en Google.",
+        "slug": "optimizacion-seo",
+        "id": "optimizacion-seo"
+    },
+    {
+        "imagen": "../IMAGENES/MantenimientoWEB.webp",
+        "titulo": "Mantenimiento de Sitios Web",
+        "precio": 400,
+        "descripcion": "Ofrecimiento de servicios mensuales de mantenimiento para asegurarse de que el sitio web esté actualizado y libre de errores.",
+        "slug": "mantenimiento-sitios-web",
+        "id": "mantenimiento-sitios-web"
+    }
+]

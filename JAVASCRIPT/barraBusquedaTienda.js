@@ -2,6 +2,8 @@
 
 const barraBusquedaTienda = document.getElementById("barraBusquedaTienda");
 const botonBarraBusqueda = document.getElementById("boton-barra-busqueda");
+const productosContainer = document.getElementById("productos-container"); // Asegúrate de que este contenedor exista en tu HTML
+const errorProducto = document.querySelector(".error-producto");
 
 botonBarraBusqueda.addEventListener("click", () => {
     busquedaProductos();
@@ -22,14 +24,13 @@ const busquedaProductos = () => {
 
         if (tituloProducto.toLowerCase().includes(barraBusquedaTienda.value.toLowerCase().trim())) {
             producto.style.display = 'block';
-            hayResultados = true; 
+            hayResultados = true;
         } else {
             producto.style.display = 'none';
         }
     });
 
-    // Si no se encuentran productos muestra el mensaje de error
-    // Agregue operador ternario
-    const errorProducto = document.querySelector(".error-producto");
+    // Mostrar u ocultar el mensaje de error
     errorProducto.style.display = hayResultados ? "none" : "block";
 };
+
